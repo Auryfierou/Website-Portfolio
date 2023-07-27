@@ -1,0 +1,182 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+section {
+  padding-top: 6rem;
+}
+
+/* LOGO ICON */
+.small-Logo {
+  width: 40px;
+  margin-right: 5px;
+}
+
+/* HOME SECTION */
+.home-section {
+  padding-top: 6rem;
+  background-color: #edd4ff;
+}
+
+/* BIO SECTION */
+.bio-section {
+  background-color: #585858;
+  color: white;
+}
+
+.card-img-top {
+  width: 30%;
+  height: 100px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 10px 10px 15px 0px rgba(255, 255, 255, 0.05);
+}
+.card-body .percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.card-body .percent svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+.card-body .percent svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 2;
+  stroke: #191919;
+  transform: translate(5px, 5px);
+}
+
+.card-body .percent svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+  opacity: 0;
+  animation: fadeIn 0.5s linear forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dot {
+  position: absolute;
+  inset: 5px;
+  z-index: 10;
+  transform: rotate(calc(3.6deg * var(--num)));
+  animation: animateDot 1s linear forwards;
+}
+
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+
+.dot::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--clr);
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+
+.number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s linear forwards;
+  animation-delay: 1.5s;
+}
+
+.number h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.number h2 span {
+  font-weight: 300;
+  color: #fff;
+  font-size: 0.5em;
+}
+
+.number h2 p {
+  font-weight: 300;
+  font-size: 0.75em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* MEDSOS SECTION */
+.medsos-section {
+  padding-top: 2rem;
+  background-color: #edd4ff;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #585858;
+  color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease-in-out;
+  text-shadow: none;
+  transition: text-shadow 0.1s ease-in-out;
+}
+
+.footer a:hover {
+  color: #dcaaff;
+  text-shadow: 0 0 10px rgb(255, 117, 248);
+}
+
+.footer-link-item {
+  list-style: none;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1f1c1c;
+}
+
+.footer-links {
+  padding-left: 0;
+}
+
+.copyright-text {
+  margin-top: 20px;
+}
