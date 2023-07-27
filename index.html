@@ -34,7 +34,7 @@
     >
       <div class="container">
         <img class="small-Logo" src="./src/logo-transparent.png" />
-        <a class="navbar-brand" href="#">Auryfierou</a>
+        <a class="navbar-brand" href="#section_1">Auryfierou</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -48,9 +48,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link smooth-scroll" href="#section_1">Home</a>
-            <a class="nav-link smooth-scroll" href="#section_2">About Me</a>
-            <a class="nav-link smooth-scroll" href="#section_3">Social Media</a>
+            <a class="nav-link" href="#section_1">Home</a>
+            <a class="nav-link" href="#section_2">About Me</a>
+            <a class="nav-link" href="#section_3">Social Media</a>
           </div>
         </div>
       </div>
@@ -350,6 +350,31 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Ambil semua elemen tautan yang mengandung # dalam href
+      const links = document.querySelectorAll('a[href*="#"]');
+
+      // Loop melalui setiap tautan dan tambahkan event listener
+      links.forEach((link) => {
+        link.addEventListener("click", smoothScroll);
+      });
+
+      // Fungsi smooth scroll
+      function smoothScroll(e) {
+        e.preventDefault(); // Menghentikan perilaku default dari tautan
+
+        // Dapatkan tujuan scroll dari atribut href tautan
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        // Scroll ke elemen tujuan dengan animasi smooth
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      }
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
