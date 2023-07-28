@@ -10,15 +10,21 @@ section {
   margin-right: 5px;
 }
 
+/* NAVBAR */
+.nav-link:hover {
+  color: #c69749;
+  text-shadow: 0 0 10px#C69749;
+}
+
 /* HOME SECTION */
 .home-section {
   padding-top: 6rem;
-  background-color: #edd4ff;
+  background-color: #585858;
 }
 
 /* BIO SECTION */
 .bio-section {
-  background-color: #585858;
+  background-color: #2e2e2e;
   color: white;
 }
 
@@ -141,23 +147,34 @@ section {
 /* MEDSOS SECTION */
 .medsos-section {
   padding-top: 2rem;
-  background-color: #edd4ff;
+  background-color: #585858;
 }
 
 .card {
   background-color: transparent;
-  border: 1px solid #585858;
+  border: 1px solid #adadad;
   transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+  color: white;
 }
 
 .card:hover {
-  border: 1px solid #e877ff;
-  box-shadow: 0px 0px 20px 1px #ab2effc2;
+  border: 1px solid #c69749;
+  box-shadow: 0px 0px 20px 1px #c69749;
+}
+
+.btn {
+  border: 1px solid #c69749;
+  color: #c69749;
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px 1px #d3d3d3;
+  background-color: #c69749;
 }
 
 /* FOOTER */
 .footer {
-  background-color: #585858;
+  background-color: #444444;
   color: white;
 }
 
@@ -170,8 +187,8 @@ section {
 }
 
 .footer a:hover {
-  color: #dcaaff;
-  text-shadow: 0 0 10px rgb(255, 117, 248);
+  color: #c69749;
+  text-shadow: 0 0 10px #c69749;
 }
 
 .footer-link-item {
