@@ -147,8 +147,7 @@ section {
 .card {
   background-color: transparent;
   border: 1px solid #585858;
-  transition: box-shadow 0.2s ease-in-out,
-  border 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .card:hover {
